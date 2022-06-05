@@ -28,6 +28,7 @@ class UserServiceApplicationTests {
 		this.userService.createStudent(new Student("John", "JohnF" , 4));
 		this.userService.createStudent(new Student("Tom", "TomF" , 4));
 		this.userService.createStudent(new Student("Haresh", "HareshF" ,5));
+		this.userService.createStudent(new Student("Jim", "JimF" ,6));
 	}
 	
 	@Test
@@ -41,7 +42,7 @@ class UserServiceApplicationTests {
 	@Test
 	 void equalsConvertStudentToEmployee() {
 		long companyCount = this.userService.getListOfEmployee().stream().filter(s->!s.company.isEmpty()).count();
-		assertEquals(5, companyCount );
+		assertEquals(6, companyCount );
 	}
 
 	
